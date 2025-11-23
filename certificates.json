@@ -1,0 +1,220 @@
+{
+  "certificates": [
+    {
+      "name": "4th International online competition in mathematics",
+      "file": "4th International online competition in mathematics-1.png",
+      "category": "competitions",
+      "issuer": "International Mathematics Competition"
+    },
+    {
+      "name": "Amazon affiliate ecommerce store from scratch",
+      "file": "amazon affiliate ecommerce store from scratch-1.png",
+      "category": "web development",
+      "issuer": "Online Course"
+    },
+    {
+      "name": "Binary Blitz Coding ninjas hackerthon",
+      "file": "Binary Blitz Coding ninjas hackerthon(participant)-1.png",
+      "category": "hackathons",
+      "issuer": "Coding Ninjas"
+    },
+    {
+      "name": "Boord full stack course Basic",
+      "file": "Boord full stack course Basic-1.png",
+      "category": "web development",
+      "issuer": "Boord"
+    },
+    {
+      "name": "CODE STORM 36-Hour Hackathon (Coordinator)",
+      "file": "CODE STORM 36-Hour Hackathon (Coordinator)-1.png",
+      "category": "hackathons",
+      "issuer": "LPU"
+    },
+    {
+      "name": "Data Structures and Algorithms using C++",
+      "file": "Data Structures and Algorithms using C++  lpu-1.png",
+      "category": "programming",
+      "issuer": "LPU"
+    },
+    {
+      "name": "Echo club (volunteer)",
+      "file": "Echo club (volunteer)-1.png",
+      "category": "volunteering",
+      "issuer": "Echo Club"
+    },
+    {
+      "name": "Responsive Web Design",
+      "file": "freecodecamp Responsive Web Design-1.png",
+      "category": "web development",
+      "issuer": "freeCodeCamp"
+    },
+    {
+      "name": "Generative AI Foundations Course",
+      "file": "Generative AI Foundations Course Cse121 live mooc-1.png",
+      "category": "artificial intelligence",
+      "issuer": "LPU MOOC"
+    },
+    {
+      "name": "Python Basic Certificate",
+      "file": "Hackerrank python_basic certificate-1.png",
+      "category": "programming",
+      "issuer": "HackerRank"
+    },
+    {
+      "name": "Cyber Security Workshop",
+      "file": "Sri cyber security workshop-1.png",
+      "category": "cybersecurity",
+      "issuer": "LPU"
+    }
+  ],
+  "folders": {
+    "Cognitiveclass": [
+      {
+        "name": "Python for Data Science",
+        "file": "Cognitiveclass/Cognitiveclass PY0101EN Certificate-1.png",
+        "category": "data science",
+        "issuer": "IBM Cognitive Class"
+      },
+      {
+        "name": "Blockchain Basics",
+        "file": "Cognitiveclass/developerWorks BC0101EN Certificate-1.png",
+        "category": "blockchain",
+        "issuer": "IBM Cognitive Class"
+      },
+      {
+        "name": "Chatbot Development",
+        "file": "Cognitiveclass/IBM CB0101EN Certificate  Cognitive Class chatbot 2023-1.png",
+        "category": "artificial intelligence",
+        "issuer": "IBM Cognitive Class"
+      },
+      {
+        "name": "Advanced Blockchain",
+        "file": "Cognitiveclass/IBMDeveloperSkillsNetwork CB0103EN Certificate-1.png",
+        "category": "blockchain",
+        "issuer": "IBM Cognitive Class"
+      },
+      {
+        "name": "Cloud Computing",
+        "file": "Cognitiveclass/IBMDeveloperSkillsNetwork CC0101EN Certificate-1.png",
+        "category": "cloud computing",
+        "issuer": "IBM Cognitive Class"
+      }
+    ],
+    "Coursera": [
+      {
+        "name": "Computer Communications",
+        "file": "coursera/Coursera Computer Communications-1.png",
+        "category": "networking",
+        "issuer": "Coursera"
+      },
+      {
+        "name": "Digital Systems - From Logic Gates to Processors",
+        "file": "coursera/Coursera Digital Systems- From Logic Gates to Processors-1.png",
+        "category": "computer architecture",
+        "issuer": "Coursera"
+      },
+      {
+        "name": "Fundamentals of Network Communication",
+        "file": "coursera/Coursera Fundamentals of Network Communication-1.png",
+        "category": "networking",
+        "issuer": "Coursera"
+      },
+      {
+        "name": "Introduction to Hardware and Operating Systems",
+        "file": "coursera/Coursera Introduction to Hardware and Operating Systems-1.png",
+        "category": "computer systems",
+        "issuer": "Coursera"
+      },
+      {
+        "name": "Packet Switching Networks and Algorithms",
+        "file": "coursera/Coursera Packet Switching Networks and Algorithms-1.png",
+        "category": "networking",
+        "issuer": "Coursera"
+      },
+      {
+        "name": "Peer-to-Peer Protocols and Local Area Networks",
+        "file": "coursera/Coursera Peer-to-Peer Protocols and Local Area Networks-1.png",
+        "category": "networking",
+        "issuer": "Coursera"
+      },
+      {
+        "name": "Software Development Processes and Methodologies",
+        "file": "coursera/Coursera Software Development Processes and Methodologies CSE320 MOOC-1.png",
+        "category": "software engineering",
+        "issuer": "Coursera"
+      },
+      {
+        "name": "TCP/IP and Advanced Topics",
+        "file": "coursera/Coursera TCPIP and Advanced Topics-1.png",
+        "category": "networking",
+        "issuer": "Coursera"
+      },
+      {
+        "name": "The Bits and Bytes of Computer Networking",
+        "file": "coursera/Coursera The Bits and Bytes of Computer Networking-1.png",
+        "category": "networking",
+        "issuer": "Coursera"
+      }
+    ],
+    "Infosys": [
+      {
+        "name": "Computational Theory - Language Principle & Finite Automata Theory",
+        "file": "infosys/Computational Theory - Language Principle & Finite Automata Theory infosys-1.png",
+        "category": "computer science",
+        "issuer": "Infosys"
+      },
+      {
+        "name": "Programming Using C++",
+        "file": "infosys/Programming Using Cpp infosys-1.png",
+        "category": "programming",
+        "issuer": "Infosys"
+      }
+    ],
+    "Neocolab": [
+      {
+        "name": "CSE202 - Data Structures",
+        "file": "neocolab/https___s3.amazonaws.com_exams-media_2027_Student certificate for CSE202 Updated_12306048@neocolab.ai-1.png",
+        "category": "programming",
+        "issuer": "Neocolab"
+      },
+      {
+        "name": "CSE205 - Algorithms",
+        "file": "neocolab/https___s3.amazonaws.com_exams-media_2027_StudentS certificate for CSE205_12306048@neocolab.ai-1.png",
+        "category": "programming",
+        "issuer": "Neocolab"
+      },
+      {
+        "name": "CSE101 - Programming Fundamentals",
+        "file": "neocolab/https___s3.amazonaws.com_exams-media_CSE101_Student E-certificate_12306048@neocolab.ai-1.png",
+        "category": "programming",
+        "issuer": "Neocolab"
+      },
+      {
+        "name": "Java Programming",
+        "file": "neocolab/https___s3.amazonaws.com_exams-media_Java Programming_Student Certificate_12306048@neocolab.ai-1.png",
+        "category": "programming",
+        "issuer": "Neocolab"
+      }
+    ],
+    "Udemy": [
+      {
+        "name": "Build Generative AI Apps and Solutions with No-Code Tools",
+        "file": "udemy/Build Generative Al Apps and Solutions with No-Code Tools  udemy-1.png",
+        "category": "artificial intelligence",
+        "issuer": "Udemy"
+      },
+      {
+        "name": "ChatGPT Made Easy AI Essentials for Beginners",
+        "file": "udemy/ChatGPT Made Easy Al Essentials for Beginners udemy-1.png",
+        "category": "artificial intelligence",
+        "issuer": "Udemy"
+      },
+      {
+        "name": "Master Generative AI & Generative AI tools (ChatGPT & more)",
+        "file": "udemy/Master Generative Al & Generative Al tools (ChatGPT & more) udemy-1.png",
+        "category": "artificial intelligence",
+        "issuer": "Udemy"
+      }
+    ]
+  }
+}

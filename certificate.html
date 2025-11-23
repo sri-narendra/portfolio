@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Certifications | Sri Narendra Pasupuleti</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #8b5cf6;
+            --secondary: #3b82f6;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --accent: #6d28d9;
+            --card-bg: rgba(30, 41, 59, 0.8);
+            --text-primary: #e2e8f0;
+            --text-secondary: #94a3b8;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--dark);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        
+        /* Clean Back Button */
+        .back-button {
+            position: fixed;
+            top: 30px;
+            left: 30px;
+            z-index: 100;
+            background: rgba(30, 41, 59, 0.9);
+            border-radius: 50%;
+            color: var(--primary);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-decoration: none !important;
+            border: none;
+            outline: none;
+        }
+        
+        .back-button:hover {
+            background: var(--primary);
+            color: white;
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+        }
+        
+        .certifications-section {
+            padding: 150px 40px 100px;
+            min-height: 100vh;
+            position: relative;
+            isolation: isolate;
+        }
+        
+        .certifications-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(139, 92, 246, 0.08) 0%, transparent 30%),
+                radial-gradient(circle at 80% 70%, rgba(59, 130, 246, 0.08) 0%, transparent 30%);
+            z-index: -1;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--primary);
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 2px;
+        }
+        
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Categories Grid Layout */
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .certification-category {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .category-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-left: 15px;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .category-icon {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            color: white;
+            font-size: 1.3rem;
+            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+        }
+        
+        .category-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 0.5px;
+        }
+        
+        .category-subtitle {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 5px;
+        }
+        
+        /* Enhanced Hybrid Scrolling Gallery */
+        .gallery-container {
+            height: 650px;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary) var(--dark);
+            position: relative;
+            mask-image: linear-gradient(
+                to bottom,
+                transparent 0%,
+                black 5%,
+                black 95%,
+                transparent 100%
+            );
+        }
+        
+        .gallery-container::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        .gallery-container::-webkit-scrollbar-track {
+            background: var(--dark);
+            border-radius: 3px;
+        }
+        
+        .gallery-container::-webkit-scrollbar-thumb {
+            background-color: var(--primary);
+            border-radius: 3px;
+        }
+        
+        .gallery-track {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            animation: scrollVertical 40s linear infinite;
+        }
+        
+        @keyframes scrollVertical {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(calc(-50% - 12.5px));
+            }
+        }
+        
+        .gallery-container:hover .gallery-track {
+            animation-play-state: paused;
+        }
+        
+        .certificate-item {
+            width: 100%;
+            height: 300px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+            position: relative;
+            background: var(--card-bg);
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            border: 1px solid rgba(139, 92, 246, 0.1);
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .certificate-item::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(59, 130, 246, 0.2));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .certificate-item:hover {
+            transform: scale(1.02) translateY(-5px) rotateY(3deg);
+            box-shadow: 0 15px 40px rgba(139, 92, 246, 0.5);
+            z-index: 10;
+            border-color: rgba(139, 92, 246, 0.3);
+        }
+        
+        .certificate-item:hover::before {
+            opacity: 1;
+        }
+        
+        .certificate-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background-color: var(--card-bg);
+            transition: transform 0.5s ease;
+        }
+        
+        .certificate-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .certificate-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(15, 23, 42, 0.95), transparent);
+            padding: 20px;
+            color: white;
+            transform: translateY(100%);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(8px);
+        }
+        
+        .certificate-item:hover .certificate-caption {
+            transform: translateY(0);
+        }
+        
+        .certificate-title {
+            font-weight: 500;
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+        
+        .certificate-subtitle {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            opacity: 0;
+            transition: opacity 0.3s ease 0.1s;
+            font-weight: 300;
+        }
+        
+        .certificate-item:hover .certificate-subtitle {
+            opacity: 1;
+        }
+        
+        .certificate-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--primary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.5);
+        }
+        
+        .certificate-item:hover .certificate-badge {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        /* Loading State */
+        .loading-state {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-secondary);
+        }
+        
+        .loading-state i {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+            animation: spin 1.5s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-secondary;
+        }
+        
+        .empty-state i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .empty-state p {
+            font-size: 1.1rem;
+        }
+        
+        /* Scroll Progress Indicator */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transform-origin: left;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .categories-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .section-title {
+                font-size: 2.4rem;
+            }
+            
+            .category-title {
+                font-size: 1.4rem;
+            }
+            
+            .gallery-container {
+                height: 550px;
+            }
+            
+            .certificate-item {
+                height: 280px;
+            }
+            
+            .gallery-track {
+                animation-duration: 50s;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .back-button {
+                top: 20px;
+                left: 20px;
+                width: 45px;
+                height: 45px;
+                font-size: 1.1rem;
+            }
+            
+            .certifications-section {
+                padding: 120px 20px 80px;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+                margin-bottom: 10px;
+            }
+            
+            .section-subtitle {
+                font-size: 1rem;
+            }
+            
+            .categories-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+            
+            .category-header {
+                margin-bottom: 20px;
+            }
+            
+            .category-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 1.2rem;
+            }
+            
+            .certificate-item {
+                height: 250px;
+            }
+            
+            .gallery-track {
+                animation-duration: 60s;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .certifications-section {
+                padding: 100px 15px 60px;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .gallery-container {
+                height: 500px;
+            }
+            
+            .certificate-item {
+                height: 220px;
+            }
+            
+            .certificate-caption {
+                padding: 15px;
+            }
+            
+            .certificate-title {
+                font-size: 1rem;
+            }
+            
+            .certificate-subtitle {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Clean Back Button -->
+    <button class="back-button" onclick="window.location.href='index.html'">
+        <i class="fas fa-arrow-left"></i>
+    </button>
+
+    <!-- Certifications Section -->
+    <section class="certifications-section">
+        <!-- Section Header -->
+        <div class="section-header">
+            <h1 class="section-title">Professional Certifications</h1>
+            <p class="section-subtitle">Validated skills and knowledge from accredited institutions and learning platforms</p>
+        </div>
+
+        <!-- Categories Grid -->
+        <div class="categories-grid" id="categories-container">
+            <div class="loading-state">
+                <i class="fas fa-spinner"></i>
+                <p>Loading certifications...</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // DOM elements
+        const categoriesContainer = document.getElementById('categories-container');
+        const scrollProgress = document.getElementById('scrollProgress');
+        
+        // Track loaded certificates to prevent duplicates
+        const loadedCertificates = new Set();
+        
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add click effect to back button
+            const backButton = document.querySelector('.back-button');
+            backButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                // Add transition effect before redirecting
+                backButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+                setTimeout(() => {
+                    window.location.href = 'index.html';
+                }, 300);
+            });
+            
+            // Add scroll progress indicator
+            window.addEventListener('scroll', updateScrollProgress);
+            
+            // Load certificates from JSON
+            loadCertificates();
+        });
+        
+        // Update scroll progress
+        function updateScrollProgress() {
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight - windowHeight;
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const progress = scrollTop / documentHeight;
+            
+            scrollProgress.style.transform = `scaleX(${progress})`;
+        }
+        
+        // Load certificates from JSON file
+        async function loadCertificates() {
+            try {
+                const response = await fetch('certificates.json');
+                if (!response.ok) {
+                    throw new Error('Failed to load certificates data');
+                }
+                
+                const data = await response.json();
+                displayCertificates(data);
+                
+            } catch (error) {
+                console.error('Error loading certificates:', error);
+                categoriesContainer.innerHTML = `
+                    <div class="empty-state">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <p>Error loading certificates</p>
+                        <p style="font-size: 0.9rem; margin-top: 10px;">${error.message}</p>
+                    </div>
+                `;
+            }
+        }
+        
+        // Display certificates based on JSON data
+        function displayCertificates(data) {
+            categoriesContainer.innerHTML = '';
+            loadedCertificates.clear();
+            
+            // Display individual certificates first
+            if (data.certificates && data.certificates.length > 0) {
+                createCategorySection('Individual Certificates', data.certificates, 'fas fa-certificate');
+            }
+            
+            // Display folder-based certificates
+            if (data.folders) {
+                Object.keys(data.folders).forEach(folderName => {
+                    const certificates = data.folders[folderName];
+                    if (certificates && certificates.length > 0) {
+                        let iconClass = 'fas fa-folder';
+                        if (folderName.toLowerCase().includes('cognitive')) iconClass = 'fas fa-brain';
+                        else if (folderName.toLowerCase().includes('coursera')) iconClass = 'fas fa-graduation-cap';
+                        else if (folderName.toLowerCase().includes('neocolab')) iconClass = 'fas fa-laptop-code';
+                        else if (folderName.toLowerCase().includes('infosys')) iconClass = 'fas fa-building';
+                        else if (folderName.toLowerCase().includes('udemy')) iconClass = 'fas fa-video';
+                        
+                        createCategorySection(folderName, certificates, iconClass);
+                    }
+                });
+            }
+            
+            // If no certificates found
+            if (categoriesContainer.innerHTML === '') {
+                categoriesContainer.innerHTML = `
+                    <div class="empty-state">
+                        <i class="fas fa-folder-open"></i>
+                        <p>No certificates found</p>
+                    </div>
+                `;
+            }
+        }
+        
+        // Create a category section
+        function createCategorySection(categoryName, certificates, iconClass) {
+            const categoryElement = document.createElement('div');
+            categoryElement.className = 'certification-category';
+            
+            // Create category header
+            const categoryHeader = document.createElement('div');
+            categoryHeader.className = 'category-header';
+            
+            const categoryIcon = document.createElement('div');
+            categoryIcon.className = 'category-icon';
+            categoryIcon.innerHTML = `<i class="${iconClass}"></i>`;
+            
+            const categoryTitle = document.createElement('h2');
+            categoryTitle.className = 'category-title';
+            categoryTitle.textContent = categoryName;
+            
+            const categorySubtitle = document.createElement('p');
+            categorySubtitle.className = 'category-subtitle';
+            categorySubtitle.textContent = `${certificates.length} certificate${certificates.length !== 1 ? 's' : ''}`;
+            
+            const categoryText = document.createElement('div');
+            categoryText.appendChild(categoryTitle);
+            categoryText.appendChild(categorySubtitle);
+            
+            categoryHeader.appendChild(categoryIcon);
+            categoryHeader.appendChild(categoryText);
+            
+            // Create gallery container
+            const galleryContainer = document.createElement('div');
+            galleryContainer.className = 'gallery-container';
+            
+            const galleryTrack = document.createElement('div');
+            galleryTrack.className = 'gallery-track';
+            
+            // Add certificate items (no duplicates)
+            certificates.forEach((certificate, index) => {
+                const certificateKey = `${certificate.file}-${certificate.name}`;
+                if (!loadedCertificates.has(certificateKey)) {
+                    loadedCertificates.add(certificateKey);
+                    const certificateItem = createCertificateItem(certificate, categoryName, index);
+                    galleryTrack.appendChild(certificateItem);
+                }
+            });
+            
+            // Only duplicate if we have items
+            const items = galleryTrack.querySelectorAll('.certificate-item');
+            if (items.length > 0) {
+                items.forEach(item => {
+                    const clone = item.cloneNode(true);
+                    galleryTrack.appendChild(clone);
+                });
+            }
+            
+            galleryContainer.appendChild(galleryTrack);
+            
+            // Assemble category
+            categoryElement.appendChild(categoryHeader);
+            categoryElement.appendChild(galleryContainer);
+            
+            // Add to container
+            categoriesContainer.appendChild(categoryElement);
+        }
+        
+        // Create a certificate item
+        function createCertificateItem(certificate, categoryName, index) {
+            const item = document.createElement('div');
+            item.className = 'certificate-item';
+            
+            // Stagger animation delay
+            item.style.animationDelay = `${index * 0.1}s`;
+            
+            const img = document.createElement('img');
+            const imagePath = `Certificates/${certificate.file}`;
+            img.src = imagePath;
+            img.alt = certificate.name;
+            img.loading = "lazy";
+            
+            // Add error handling for images
+            img.onerror = function() {
+                // If image fails to load, show a placeholder
+                this.src = `https://via.placeholder.com/800x600/1e293b/8b5cf6?text=${encodeURIComponent(certificate.name)}`;
+                this.alt = 'Certificate image not available';
+            };
+            
+            // Open image in new tab when clicked
+            item.addEventListener('click', () => {
+                window.open(imagePath, '_blank');
+            });
+            
+            // Add caption
+            const caption = document.createElement('div');
+            caption.className = 'certificate-caption';
+            
+            const titleElement = document.createElement('div');
+            titleElement.className = 'certificate-title';
+            titleElement.textContent = certificate.name;
+            
+            const subtitleElement = document.createElement('div');
+            subtitleElement.className = 'certificate-subtitle';
+            subtitleElement.textContent = `${certificate.issuer} • ${certificate.category}`;
+            
+            caption.appendChild(titleElement);
+            caption.appendChild(subtitleElement);
+            
+            // Add badge icon
+            const badge = document.createElement('div');
+            badge.className = 'certificate-badge';
+            const icon = document.createElement('i');
+            icon.className = 'fas fa-certificate';
+            badge.appendChild(icon);
+            
+            item.appendChild(img);
+            item.appendChild(caption);
+            item.appendChild(badge);
+            
+            return item;
+        }
+    </script>
+</body>
+</html>
