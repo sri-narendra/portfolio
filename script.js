@@ -293,48 +293,48 @@ function renderContact(contact) {
 
     // We replace the innerHTML of .contact-methods
     container.innerHTML = `
-        <div class="contact-method" onclick="window.location.href='mailto:${contact.email}'">
+        <a href="mailto:${contact.email}" class="contact-method">
             <div class="contact-icon email-icon"><i class="fas fa-envelope"></i></div>
             <h3>Email</h3>
             <p>${contact.email}</p>
-            <a href="mailto:${contact.email}" class="contact-link">Send a message</a>
-        </div>
-        <div class="contact-method" onclick="window.open('${contact.whatsapp}', '_blank')">
+            <span class="contact-link">Send a message</span>
+        </a>
+        <a href="${contact.whatsapp}" target="_blank" class="contact-method">
             <div class="contact-icon whatsapp-icon"><i class="fab fa-whatsapp"></i></div>
             <h3>WhatsApp</h3>
             <p>${contact.phone}</p>
-            <a href="${contact.whatsapp}" target="_blank" class="contact-link">Chat on WhatsApp</a>
-        </div>
-        <div class="contact-method" onclick="window.location.href='tel:${contact.phone}'">
+            <span class="contact-link">Chat on WhatsApp</span>
+        </a>
+        <a href="tel:${contact.phone}" class="contact-method">
             <div class="contact-icon phone-icon"><i class="fas fa-phone-alt"></i></div>
             <h3>Phone</h3>
             <p>${contact.phone}</p>
-            <a href="tel:${contact.phone}" class="contact-link">Call Now</a>
-        </div>
-        <div class="contact-method" onclick="window.open('${contact.instagram}', '_blank')">
+            <span class="contact-link">Call Now</span>
+        </a>
+        <a href="${contact.instagram}" target="_blank" class="contact-method">
             <div class="contact-icon instagram-icon"><i class="fab fa-instagram"></i></div>
             <h3>Instagram</h3>
             <p>@${contact.instagram.split('/').filter(Boolean).pop()}</p>
-            <a href="${contact.instagram}" target="_blank" class="contact-link">Follow me</a>
-        </div>
-        <div class="contact-method" onclick="window.open('${contact.linkedin}', '_blank')">
+            <span class="contact-link">Follow me</span>
+        </a>
+        <a href="${contact.linkedin}" target="_blank" class="contact-method">
             <div class="contact-icon linkedin-icon"><i class="fab fa-linkedin-in"></i></div>
             <h3>LinkedIn</h3>
             <p>Connect</p>
-            <a href="${contact.linkedin}" target="_blank" class="contact-link">Connect</a>
-        </div>
-        <div class="contact-method" onclick="window.open('${contact.github}', '_blank')">
+            <span class="contact-link">Connect</span>
+        </a>
+        <a href="${contact.github}" target="_blank" class="contact-method">
             <div class="contact-icon github-icon"><i class="fab fa-github"></i></div>
             <h3>GitHub</h3>
             <p>${contact.github.split('/').filter(Boolean).pop()}</p>
-            <a href="${contact.github}" target="_blank" class="contact-link">View Projects</a>
-        </div>
-        <div class="contact-method">
+            <span class="contact-link">View Projects</span>
+        </a>
+        <a href="#" class="contact-method">
             <div class="contact-icon location-icon"><i class="fas fa-map-marker-alt"></i></div>
             <h3>Location</h3>
             <p>${contact.location}</p>
             <span class="contact-link">Open Map</span>
-        </div>
+        </a>
     `;
 }
 

@@ -517,6 +517,28 @@ nav.scrolled {
     gap: 30px;
 }
 
+.contact-method {
+    background: rgba(31, 41, 55, 0.9);
+    padding: 30px 25px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    /* Anchor tag support */
+    text-decoration: none;
+    color: inherit;
+    width: 100%; /* Ensure it fills grid cell */
+    box-sizing: border-box; 
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
 .project-card {
     background: rgba(31, 41, 55, 0.9);
     padding: 30px;
@@ -1171,6 +1193,8 @@ nav.scrolled {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
     margin-top: 50px;
+    position: relative; /* Ensure z-index works */
+    z-index: 10; /* Bring above particles/overlays */
 }
 
 .contact-method {
@@ -1440,7 +1464,12 @@ body.light-theme {
 .light-theme .logo { color: #7c3aed; }
 .light-theme .nav-links a { color: #1e293b; }
 .light-theme .nav-links a:hover { color: #7c3aed; }
+/* Fix Theme Toggle Visibility in Light Mode */
+.light-theme nav .theme-toggle { color: #1e293b; }
+.light-theme nav .theme-toggle:hover { color: #7c3aed; }
 .light-theme .mobile-menu-btn { color: #1e293b; }
+/* Mobile Sidebar Toggle */
+.light-theme .mobile-sidebar .theme-toggle { color: #1e293b; }
 .light-theme .section-title { color: #7c3aed; }
 .light-theme .section-title::after { background: linear-gradient(90deg, #7c3aed, #3b82f6); }
 
@@ -1461,11 +1490,9 @@ body.light-theme {
 .light-theme .project-description span, .light-theme .skill-description span { color: #1e293b; }
 .light-theme .skill-category-title i { color: #3b82f6; }
 
-.light-theme .social-btn {
-    background: rgba(0, 0, 0, 0.05);
-    color: #1e293b;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-}
+.light-theme .skill-category-title i { color: #3b82f6; }
+
+/* .light-theme .social-btn removed to keep hero buttons white/transparent on dark gradient */
 
 .light-theme footer {
     background: rgba(248, 250, 252, 0.9);
@@ -1522,6 +1549,18 @@ body:not(:has(nav)) .light-theme .theme-toggle,
     background: linear-gradient(135deg, rgba(124, 58, 237, 0.2), rgba(59, 130, 246, 0.2));
 }
 
+/* Certificates Light Theme */
+.light-theme .category-header h3 { color: #1e293b; }
+.light-theme .certificate-item {
+    background: rgba(241, 245, 249, 0.9);
+    border: 1px solid rgba(124, 58, 237, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.light-theme .certificate-item h4 { color: #1e293b; }
+.light-theme .certificate-item p { color: #475569; }
+.light-theme .certificate-overlay { background: rgba(124, 58, 237, 0.9); }
+.light-theme .view-btn { color: #ffffff; border-color: #ffffff; }
+
 /* =========================================
    14. Responsive & Flexible Updates
    ========================================= */
@@ -1552,8 +1591,15 @@ html {
 }
 
 /* Improved Grids */
-.projects-grid, .skills-grid, .contact-methods, .categories-grid {
+/* Improved Grids */
+.projects-grid, .skills-grid, .contact-methods {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
 }
 
 /* Profile Photo Flexibility */
