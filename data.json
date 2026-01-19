@@ -1,0 +1,114 @@
+{
+    "hero": {
+        "name": "Sri Narendra Pasupuleti",
+        "title": "Full Stack Developer",
+        "description": "",
+        "image": "pic.png",
+        "social": {
+            "linkedin": "https://www.linkedin.com/in/sri-narendra-p-2b75291bb/",
+            "github": "https://github.com/sri-narendra",
+            "instagram": "https://www.instagram.com/sri._.official.student/",
+            "email": "mailto:srinarendraofficial@gmail.com"
+        }
+    },
+    "about": {
+        "objective": "To secure a challenging position where I can effectively contribute my skills as a computer science professional possessing competent technical skills and a creative mindset, with opportunities for growth and impact.",
+        "education": [
+            {
+                "degree": "Bachelor of Technology in Computer Science",
+                "school": "Lovely Professional University, Phagwara, India",
+                "details": "Expected Graduation: 2027"
+            },
+            {
+                "degree": "Higher Secondary Education",
+                "school": "Narayana Junior College, Rajahmundry, India",
+                "details": "Percentage: 68%"
+            },
+            {
+                "degree": "Secondary School Education",
+                "school": "Sri Gowthami School, Rajahmundry, India",
+                "details": "CGPA: 10.0"
+            }
+        ],
+        "softSkills": [
+            "Adaptable",
+            "Smart Worker",
+            "Creative Thinker",
+            "Strong Leadership",
+            "Good Communicator"
+        ],
+        "certifications": [
+            "Chatbot Development – CognitiveClass",
+            "Blockchain Basics – CognitiveClass",
+            "Hackerrank Python Basic Certificate",
+            "Boord Full Stack Course Basic",
+            "FreeCodeCamp – Responsive Web Design",
+            "Neocolab certificates on C, C++, Java and DSA"
+        ],
+        "languages": [
+            "English",
+            "Telugu",
+            "Hindi"
+        ]
+    },
+    "detailedSkills": [
+        {
+            "title": "Designing",
+            "overview": "Proficient in creating visually appealing designs for web and print media, focusing on user-centric aesthetics and functionality.",
+            "tools": ["UI/UX Design", "Figma", "Adobe Photoshop"]
+        },
+        {
+            "title": "Editing",
+            "overview": "Skilled in video and photo editing, producing high-quality content with attention to detail and storytelling.",
+            "tools": ["Adobe Premiere Pro", "Adobe After Effects", "DaVinci Resolve"]
+        },
+        {
+            "title": "Public Speaking",
+            "overview": "Experienced in delivering engaging presentations and speeches, with strong communication and audience engagement skills.",
+            "tools": ["Presentation Skills", "Storytelling", "Audience Engagement"]
+        }
+    ],
+    "experience": [
+        {
+            "title": "Graphic Designer",
+            "company": "Division of Student Welfare - LPU",
+            "date": "August 2025 - Present (6 months)",
+            "location": "Phagwara, Punjab, India",
+            "description": "Designed visual content for university events and student welfare initiatives.",
+            "skills": ["Graphic Design", "Event Branding"]
+        },
+        {
+            "title": "Technical Team Lead",
+            "company": "Gravity",
+            "date": "November 2024 - Present (1 year 3 months)",
+            "location": "Phagwara, Punjab, India",
+            "description": "Leading the technical team in executing projects and events.",
+            "skills": ["Leadership", "Technical Management"]
+        },
+        {
+            "title": "Event Management member",
+            "company": "echo",
+            "date": "February 2024 - Present (2 years)",
+            "location": "Phagwara, Punjab, India",
+            "description": "Coordinating and managing various events.",
+            "skills": ["Event Management", "Coordination"]
+        },
+        {
+            "title": "Technical Team Member",
+            "company": "SANGUINE LPU",
+            "date": "November 2024 - November 2024 (1 month)",
+            "location": "Phagwara, Punjab, India",
+            "description": "Contributed to technical tasks and event support.",
+            "skills": ["Teamwork", "Technical Support"]
+        }
+    ],
+    "contact": {
+        "email": "srinarendraofficial@gmail.com",
+        "phone": "+91 8520988939",
+        "whatsapp": "https://wa.me/918520988939",
+        "instagram": "https://www.instagram.com/sri._.official.student/",
+        "linkedin": "https://www.linkedin.com/in/sri-narendra-p-2b75291bb/",
+        "github": "https://github.com/sri-narendra",
+        "location": "Rajahmundry, India"
+    }
+}

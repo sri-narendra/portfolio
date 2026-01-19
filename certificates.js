@@ -1,4 +1,4 @@
-{
+const certificatesData = {
   "certificates": [
     {
       "name": "4th International online competition in mathematics",
@@ -217,4 +217,4 @@
       }
     ]
   }
-}
+};

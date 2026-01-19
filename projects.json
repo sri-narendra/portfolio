@@ -1,0 +1,44 @@
+[
+    {
+        "title": "Tasks Website with Solo Leveling Theme",
+        "description": "Created a visually appealing to-do list website with a Solo Leveling anime theme using HTML, CSS, and JavaScript.",
+        "tech": ["HTML", "CSS", "JavaScript"],
+        "link": "https://example.com/project1",
+        "icon": "fas fa-tasks" 
+    },
+    {
+        "title": "YouTube Video Downloader",
+        "description": "Developed a tool using Python modules to fetch and download video streams, providing a simple interface for users.",
+        "tech": ["Python"],
+        "link": "https://example.com/project2",
+        "icon": "fab fa-youtube" 
+    },
+    {
+        "title": "Games (Scratch platform)",
+        "description": "Designed and developed multiple engaging games using the Scratch platform, focusing on creativity and user interaction.",
+        "tech": ["Scratch", "Game Development"],
+        "link": "https://example.com/project3",
+        "icon": "fas fa-gamepad" 
+    },
+    {
+        "title": "QR Code Generator",
+        "description": "Built a Python-based tool that enables users to create and download QR codes through a simple and intuitive interface.",
+        "tech": ["Python"],
+        "link": "https://example.com/project4",
+        "icon": "fas fa-qrcode" 
+    },
+    {
+        "title": "Text-to-Speech Converter",
+        "description": "Developed a Python application that converts input text into speech, offering users a straightforward way to generate audio output from text.",
+        "tech": ["Python"],
+        "link": "https://example.com/project5",
+        "icon": "fas fa-volume-up" 
+    },
+    {
+        "title": "lpu cgpa predicter",
+        "description": "Developed a Python application that predicts the CGPA of a student.",
+        "tech": ["Python"],
+        "link": "https://example.com/project5",
+        "icon": "fas fa-calculator" 
+    }
+]

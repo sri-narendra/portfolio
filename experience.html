@@ -1,738 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sri Narendra Pasupuleti | Experience</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
-    <style>
-        /* Reset and Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #0f172a;
-            color: #e5e7eb;
-            line-height: 1.6;
-            overflow-x: hidden;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-        
-        ul {
-            list-style: none;
-        }
-        
-        /* Utility Classes */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .section-padding {
-            padding: 100px 0;
-        }
-        
-        .section-title {
-            font-size: 3rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 80px;
-            color: #a78bfa;
-            font-family: 'Montserrat', sans-serif;
-            text-transform: uppercase;
-            position: relative;
-            letter-spacing: 2px;
-        }
-        
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 150px;
-            height: 4px;
-            background: linear-gradient(90deg, #a78bfa, #60a5fa);
-            border-radius: 2px;
-            box-shadow: 0 0 15px rgba(96, 165, 250, 0.5);
-        }
-        
-        /* Experience Section */
-        .experience {
-            background: linear-gradient(135deg, #1e3a8a 0%, #4c1d95 100%);
-            position: relative;
-            overflow: hidden;
-            flex-grow: 1;
-            display: flex;
-            align-items: center;
-        }
-        
-        .experience-item {
-            background: rgba(31, 41, 55, 0.9);
-            padding: 40px;
-            border-radius: 15px;
-            margin-bottom: 40px;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(167, 139, 250, 0.1);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .experience-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, #a78bfa, #60a5fa);
-        }
-        
-        .experience-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(167, 139, 250, 0.2);
-        }
-        
-        .experience-header {
-            display: flex;
-            justify-content: space-between;
-            flex-direction: column;
-            margin-bottom: 25px;
-        }
-        
-        @media (min-width: 768px) {
-            .experience-header {
-                flex-direction: row;
-                align-items: center;
-            }
-        }
-        
-        .experience-title {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #a78bfa;
-            font-family: 'Montserrat', sans-serif;
-            margin-bottom: 10px;
-            position: relative;
-            display: inline-block;
-        }
-        
-        .experience-title::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, #a78bfa, #60a5fa);
-            transition: width 0.3s ease;
-        }
-        
-        .experience-item:hover .experience-title::after {
-            width: 100%;
-        }
-        
-        .experience-company {
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: #e5e7eb;
-            margin-bottom: 10px;
-        }
-        
-        .experience-date {
-            color: #94a3b8;
-            font-size: 1rem;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .experience-date i {
-            margin-right: 10px;
-            color: #60a5fa;
-        }
-        
-        .experience-location {
-            display: flex;
-            align-items: center;
-            color: #94a3b8;
-            font-size: 1rem;
-            margin-bottom: 15px;
-        }
-        
-        .experience-location i {
-            margin-right: 10px;
-            color: #60a5fa;
-        }
-        
-        .experience-description {
-            color: #e5e7eb;
-            margin-bottom: 20px;
-            line-height: 1.8;
-            font-size: 1.1rem;
-        }
-        
-        .experience-description ul {
-            margin-top: 15px;
-        }
-        
-        .experience-description li {
-            position: relative;
-            padding-left: 25px;
-            margin-bottom: 12px;
-        }
-        
-        .experience-description li::before {
-            content: '▹';
-            position: absolute;
-            left: 0;
-            color: #a78bfa;
-            font-size: 1.2rem;
-            line-height: 1.2;
-        }
-        
-        .experience-skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 30px;
-        }
-        
-        .experience-skill {
-            background: linear-gradient(135deg, rgba(167, 139, 250, 0.2), rgba(96, 165, 250, 0.2));
-            color: #ffffff;
-            padding: 8px 16px;
-            border-radius: 25px;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(167, 139, 250, 0.3);
-            backdrop-filter: blur(5px);
-        }
-        
-        .experience-skill:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(167, 139, 250, 0.3);
-            background: linear-gradient(135deg, rgba(167, 139, 250, 0.4), rgba(96, 165, 250, 0.4));
-            border-color: rgba(167, 139, 250, 0.5);
-        }
-        
-        /* Back Button */
-        .back-button {
-            position: fixed;
-            top: 30px;
-            left: 30px;
-            z-index: 100;
-            background: rgba(30, 41, 59, 0.9);
-            border-radius: 50%;
-            color: #a78bfa;
-            width: 60px;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-            border: 2px solid rgba(167, 139, 250, 0.3);
-            backdrop-filter: blur(5px);
-            text-decoration: none;
-        }
-        
-        .back-button:hover {
-            background: #a78bfa;
-            color: white;
-            transform: scale(1.1);
-            box-shadow: 0 12px 30px rgba(167, 139, 250, 0.5);
-            border-color: transparent;
-        }
-        
-        /* Footer */
-        footer {
-            background: linear-gradient(to top, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.8));
-            color: #e5e7eb;
-            padding: 70px 0 30px;
-            position: relative;
-            z-index: 1;
-            overflow: hidden;
-        }
-        
-        footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, #a78bfa, #60a5fa);
-            box-shadow: 0 0 20px rgba(167, 139, 250, 0.5);
-        }
-        
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 40px;
-        }
-        
-        @media (min-width: 768px) {
-            .footer-content {
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-            }
-        }
-        
-        .footer-info h3 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(90deg, #a78bfa, #60a5fa);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        
-        .footer-info p {
-            color: #94a3b8;
-            font-size: 1.1rem;
-        }
-        
-        .footer-social {
-            display: flex;
-            gap: 25px;
-        }
-        
-        .footer-social a {
-            color: #94a3b8;
-            font-size: 1.5rem;
-            transition: all 0.3s ease;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(30, 41, 59, 0.7);
-            border: 1px solid rgba(167, 139, 250, 0.2);
-        }
-        
-        .footer-social a:hover {
-            color: #a78bfa;
-            transform: translateY(-5px) scale(1.1);
-            background: rgba(167, 139, 250, 0.1);
-            box-shadow: 0 5px 15px rgba(167, 139, 250, 0.2);
-            border-color: rgba(167, 139, 250, 0.4);
-        }
-        
-        .footer-divider {
-            border-top: 1px solid rgba(51, 65, 85, 0.5);
-            margin-top: 40px;
-            padding-top: 25px;
-            text-align: center;
-            color: #94a3b8;
-            font-size: 0.9rem;
-            position: relative;
-        }
-        
-        .footer-divider::before {
-            content: '';
-            position: absolute;
-            top: -1px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #a78bfa, transparent);
-        }
-        
-        /* Theme Toggle Button */
-        .theme-toggle {
-            position: fixed;
-            top: 30px;
-            right: 30px;
-            z-index: 100;
-            background: rgba(30, 41, 59, 0.9);
-            border-radius: 50%;
-            color: #a78bfa;
-            width: 60px;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-            border: 2px solid rgba(167, 139, 250, 0.3);
-            backdrop-filter: blur(5px);
-        }
-        
-        .theme-toggle:hover {
-            background: #a78bfa;
-            color: white;
-            transform: scale(1.1);
-            box-shadow: 0 12px 30px rgba(167, 139, 250, 0.5);
-            border-color: transparent;
-        }
-        
-        /* Light Theme Styles */
-        body.light-theme {
-            background-color: #f8fafc;
-            color: #1e293b;
-        }
-        
-        .light-theme .section-title {
-            color: #7c3aed;
-        }
-        
-        .light-theme .section-title::after {
-            background: linear-gradient(90deg, #7c3aed, #3b82f6);
-            box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
-        }
-        
-        .light-theme .experience {
-            background: linear-gradient(135deg, #3b82f6 0%, #7c3aed 100%);
-        }
-        
-        .light-theme .experience-item {
-            background: rgba(241, 245, 249, 0.9);
-            border: 1px solid rgba(124, 58, 237, 0.1);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .light-theme .experience-item::before {
-            background: linear-gradient(90deg, #7c3aed, #3b82f6);
-        }
-        
-        .light-theme .experience-item:hover {
-            box-shadow: 0 15px 35px rgba(124, 58, 237, 0.1);
-        }
-        
-        .light-theme .experience-title {
-            color: #7c3aed;
-        }
-        
-        .light-theme .experience-title::after {
-            background: linear-gradient(90deg, #7c3aed, #3b82f6);
-        }
-        
-        .light-theme .experience-company {
-            color: #1e293b;
-        }
-        
-        .light-theme .experience-date,
-        .light-theme .experience-location {
-            color: #475569;
-        }
-        
-        .light-theme .experience-date i,
-        .light-theme .experience-location i {
-            color: #3b82f6;
-        }
-        
-        .light-theme .experience-description {
-            color: #1e293b;
-        }
-        
-        .light-theme .experience-description li::before {
-            color: #7c3aed;
-        }
-        
-        .light-theme .experience-skill {
-            background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(59, 130, 246, 0.1));
-            color: #1e293b;
-            border: 1px solid rgba(124, 58, 237, 0.2);
-        }
-        
-        .light-theme .experience-skill:hover {
-            background: linear-gradient(135deg, rgba(124, 58, 237, 0.2), rgba(59, 130, 246, 0.2));
-            box-shadow: 0 5px 15px rgba(124, 58, 237, 0.2);
-            border-color: rgba(124, 58, 237, 0.3);
-        }
-        
-        .light-theme footer {
-            background: linear-gradient(to top, rgba(248, 250, 252, 0.95), rgba(241, 245, 249, 0.8));
-        }
-        
-        .light-theme footer::before {
-            background: linear-gradient(90deg, #7c3aed, #3b82f6);
-            box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
-        }
-        
-        .light-theme .footer-info h3 {
-            background: linear-gradient(90deg, #7c3aed, #3b82f6);
-        }
-        
-        .light-theme .footer-info p {
-            color: #475569;
-        }
-        
-        .light-theme .footer-social a {
-            color: #475569;
-            background: rgba(241, 245, 249, 0.7);
-            border: 1px solid rgba(124, 58, 237, 0.2);
-        }
-        
-        .light-theme .footer-social a:hover {
-            color: #7c3aed;
-            background: rgba(124, 58, 237, 0.1);
-            box-shadow: 0 5px 15px rgba(124, 58, 237, 0.1);
-            border-color: rgba(124, 58, 237, 0.3);
-        }
-        
-        .light-theme .footer-divider {
-            border-top: 1px solid rgba(203, 213, 225, 0.5);
-            color: #64748b;
-        }
-        
-        .light-theme .footer-divider::before {
-            background: linear-gradient(90deg, transparent, #7c3aed, transparent);
-        }
-        
-        .light-theme .back-button,
-        .light-theme .theme-toggle {
-            background: rgba(241, 245, 249, 0.9);
-            color: #7c3aed;
-            border: 2px solid rgba(124, 58, 237, 0.3);
-        }
-        
-        .light-theme .back-button:hover,
-        .light-theme .theme-toggle:hover {
-            background: #7c3aed;
-            color: white;
-            border-color: transparent;
-        }
-        
-        /* Responsive Adjustments */
-        @media (max-width: 991px) {
-            .section-padding {
-                padding: 80px 0;
-            }
-            
-            .section-title {
-                font-size: 2.5rem;
-                margin-bottom: 60px;
-            }
-            
-            .experience-item {
-                padding: 30px;
-            }
-        }
-        
-        @media (max-width: 767px) {
-            .section-title {
-                font-size: 2rem;
-                margin-bottom: 50px;
-            }
-            
-            .experience-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            
-            .back-button,
-            .theme-toggle {
-                width: 50px;
-                height: 50px;
-                font-size: 1.2rem;
-                top: 20px;
-            }
-            
-            .back-button {
-                left: 20px;
-            }
-            
-            .theme-toggle {
-                right: 20px;
-            }
-            
-            .footer-social a {
-                width: 45px;
-                height: 45px;
-                font-size: 1.3rem;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .section-title {
-                font-size: 1.8rem;
-            }
-            
-            .experience-item {
-                padding: 25px;
-            }
-            
-            .experience-title {
-                font-size: 1.5rem;
-            }
-            
-            .experience-company {
-                font-size: 1.2rem;
-            }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <!-- Back Button -->
-    <a href="index.html" class="back-button">
-        <i class="fas fa-arrow-left"></i>
-    </a>
 
-    <!-- Theme Toggle Button -->
-    <button class="theme-toggle" id="themeToggle">
-        <i class="fas fa-moon"></i>
-    </button>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <div class="logo">Sri Narendra</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="certificate.html">Certifications</a>
+                <a href="experience.html" class="active">Experience</a>
+                <a href="projects.html">Projects</a>
+                <a href="skills.html">Skills</a>
+                <a href="contact.html">Contact</a>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar Navigation -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+    <div class="mobile-sidebar" id="mobileSidebar">
+        <button class="mobile-sidebar-close" id="mobileSidebarClose">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="certificate.html">Certifications</a>
+            <a href="experience.html" class="active">Experience</a>
+            <a href="projects.html">Projects</a>
+            <a href="skills.html">Skills</a>
+            <a href="contact.html">Contact</a>
+            <button class="theme-toggle" id="mobileThemeToggle">
+                <i class="fas fa-moon"></i> Toggle Theme
+            </button>
+        </div>
+    </div>
 
     <!-- Experience Section -->
-    <section class="experience section-padding">
+    <section id="experience" class="experience section-padding">
         <div class="container">
-            <h2 class="section-title">Professional Journey</h2>
+            <h2 class="section-title">Professional Experience</h2>
             
-            <!-- Designer Position -->
-            <div class="experience-item">
-                <div class="experience-header">
-                    <div>
-                        <h3 class="experience-title">Designer</h3>
-                        <h4 class="experience-company">Department of Student Organisation, LPU</h4>
-                    </div>
-                    <div>
-                        <p class="experience-date"><i class="far fa-calendar-alt"></i> August 2025 - Present</p>
-                        <p class="experience-location">
-                            <i class="fas fa-map-marker-alt"></i> Phagwara, Punjab, India
-                        </p>
-                    </div>
-                </div>
-                <div class="experience-description">
-                    <p>Creating compelling visual designs and graphics for various student organization initiatives, events, and promotional materials at Lovely Professional University.</p>
-                    <ul>
-                        <li>Designing posters, banners, and digital content for university events and campaigns</li>
-                        <li>Developing brand identity and visual assets for student organizations</li>
-                        <li>Collaborating with event teams to create engaging visual experiences</li>
-                        <li>Creating social media graphics and promotional materials</li>
-                        <li>Implementing design principles to enhance communication and engagement</li>
-                    </ul>
-                </div>
-                <div class="experience-skills">
-                    <span class="experience-skill">Graphic Design</span>
-                    <span class="experience-skill">Canva</span>
-                    <span class="experience-skill">Social Media Posts</span>
-                    <span class="experience-skill">Adobe Photoshop</span>
-                    <span class="experience-skill">Creative Strategy</span>
-                </div>
-            </div>
-            
-            <!-- Gravity Experience -->
-            <div class="experience-item">
-                <div class="experience-header">
-                    <div>
-                        <h3 class="experience-title">Technical Team Lead</h3>
-                        <h4 class="experience-company">Gravity</h4>
-                    </div>
-                    <div>
-                        <p class="experience-date"><i class="far fa-calendar-alt"></i> November 2024 - Present</p>
-                        <p class="experience-location">
-                            <i class="fas fa-map-marker-alt"></i> Phagwara, Punjab, India
-                        </p>
-                    </div>
-                </div>
-                <div class="experience-description">
-                    <p>Leading the technical team at Gravity, overseeing project development and implementation. Responsible for coordinating team efforts, ensuring technical excellence, and driving innovation in our solutions.</p>
-                    <ul>
-                        <li>Lead a team of developers in creating cutting-edge technical solutions</li>
-                        <li>Oversee project architecture and technical decision-making</li>
-                        <li>Mentor junior team members and conduct technical training sessions</li>
-                        <li>Collaborate with cross-functional teams to deliver high-quality products</li>
-                    </ul>
-                </div>
-                <div class="experience-skills">
-                    <span class="experience-skill">Leadership</span>
-                    <span class="experience-skill">Team Management</span>
-                    <span class="experience-skill">Technical Strategy</span>
-                    <span class="experience-skill">Project Coordination</span>
-                    <span class="experience-skill">Innovation</span>
-                </div>
-            </div>
-            
-            <!-- ECHO Experience -->
-            <div class="experience-item">
-                <div class="experience-header">
-                    <div>
-                        <h3 class="experience-title">Event Management Member</h3>
-                        <h4 class="experience-company">ECHO</h4>
-                    </div>
-                    <div>
-                        <p class="experience-date"><i class="far fa-calendar-alt"></i> February 2024 - Present</p>
-                        <p class="experience-location">
-                            <i class="fas fa-map-marker-alt"></i> Phagwara, Punjab, India
-                        </p>
-                    </div>
-                </div>
-                <div class="experience-description">
-                    <p>Active member of the ECHO event management team, responsible for planning and executing various technical and non-technical events at the university level.</p>
-                    <ul>
-                        <li>Coordinated logistics for multiple university events with 100+ participants</li>
-                        <li>Managed technical aspects of events including AV setup and live streaming</li>
-                        <li>Collaborated with faculty and student organizations to plan event schedules</li>
-                        <li>Handled event promotion through social media and campus channels</li>
-                        <li>Developed innovative event concepts to increase student engagement</li>
-                    </ul>
-                </div>
-                <div class="experience-skills">
-                    <span class="experience-skill">Event Planning</span>
-                    <span class="experience-skill">Logistics</span>
-                    <span class="experience-skill">Teamwork</span>
-                    <span class="experience-skill">Communication</span>
-                    <span class="experience-skill">Creativity</span>
-                </div>
-            </div>
-            
-            <!-- SANGUINE LPU Experience -->
-            <div class="experience-item">
-                <div class="experience-header">
-                    <div>
-                        <h3 class="experience-title">Technical Team Member</h3>
-                        <h4 class="experience-company">SANGUINE LPU</h4>
-                    </div>
-                    <div>
-                        <p class="experience-date"><i class="far fa-calendar-alt"></i> November 2024 - November 2024</p>
-                        <p class="experience-location">
-                            <i class="fas fa-map-marker-alt"></i> Phagwara, Punjab, India
-                        </p>
-                    </div>
-                </div>
-                <div class="experience-description">
-                    <p>Contributed as a technical team member for SANGUINE LPU, assisting with various technical initiatives and projects during a focused one-month engagement.</p>
-                    <ul>
-                        <li>Assisted in developing technical solutions for organization initiatives</li>
-                        <li>Provided technical support for events and activities</li>
-                        <li>Collaborated with team members on short-term technical projects</li>
-                        <li>Contributed to the organization's technical documentation</li>
-                    </ul>
-                </div>
-                <div class="experience-skills">
-                    <span class="experience-skill">Technical Support</span>
-                    <span class="experience-skill">Collaboration</span>
-                    <span class="experience-skill">Problem Solving</span>
-                    <span class="experience-skill">Adaptability</span>
-                </div>
-            </div>
+            <!-- Experience Item 1 -->
+        <div class="container" id="experience-container">
+            <!-- Dynamically populated from data.json -->
+        </div>
+
         </div>
     </section>
 
@@ -742,19 +70,19 @@
             <div class="footer-content">
                 <div class="footer-info">
                     <h3>Sri Narendra Pasupuleti</h3>
-                    <p>Full Stack Developer & Technical Leader</p>
+                    <p>Full Stack Developer</p>
                 </div>
                 <div class="footer-social">
-                    <a href="mailto:srinarendraofficial@gmail.com" aria-label="Email">
+                    <a href="mailto:srinarendraofficial@gmail.com">
                         <i class="fas fa-envelope"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/sri-narendra-p-2b75291bb/" target="_blank" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/sri-narendra-p-2b75291bb/" target="_blank">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="tel:+918520988939" aria-label="Phone">
+                    <a href="tel:+918520988939">
                         <i class="fas fa-phone-alt"></i>
                     </a>
-                    <a href="https://github.com/sri-narendra" target="_blank" aria-label="GitHub">
+                    <a href="https://github.com/yourusername" target="_blank">
                         <i class="fab fa-github"></i>
                     </a>
                 </div>
@@ -765,24 +93,16 @@
         </div>
     </footer>
 
-    <script>
-        // Theme Toggle
-        const themeToggle = document.getElementById('themeToggle');
-        const body = document.body;
-        const savedTheme = localStorage.getItem('theme') ||
-            (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
 
-        if (savedTheme === 'light') {
-            body.classList.add('light-theme');
-            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-        }
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- SplitType -->
+    <script src="https://unpkg.com/split-type"></script>
+    <!-- Vanilla Tilt -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
 
-        themeToggle.addEventListener('click', () => {
-            body.classList.toggle('light-theme');
-            const isLight = body.classList.contains('light-theme');
-            themeToggle.innerHTML = isLight ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
-            localStorage.setItem('theme', isLight ? 'light' : 'dark');
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
+
 </html>
